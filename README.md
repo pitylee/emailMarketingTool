@@ -1,7 +1,7 @@
 # Laravel tool
 
 ## For the Laravel Tool
-Go to the Laravel readme found in [its corresponding readme](./tool/readme.md)
+Go to the Laravel readme found in [its corresponding readme](./tool/README.md)
 
 # Laradock 
 ## Initialize the repository
