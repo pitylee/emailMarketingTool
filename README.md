@@ -24,6 +24,13 @@ And then pull the laradock submodule, in some cases with older version of git th
 git submodule update --init --recursive
 ```
 
+## ❗IMPORTANT❗
+With the latest Laradock version you will get some errors during the docker-compose build, that can be easily fixed by injecting some dependencies, in this case, since it is a submodule, it is required to do so after the submodule got initialised, in the Laradock workspace Dockerfile with the command:
+
+```
+awk '{sub(/apt-utils/,"libargon2-1 libidn2-0 libpcre2-8-0 libpcre3 libxml2 libzstd1 apt-utils")}1' ./laradock/workspace/Dockerfile > ./laradock/workspace/Dockerfile.txt && mv ./laradock/workspace/Dockerfile.txt ./laradock/workspace/Dockerfile
+```
+
 ## Dependencies
 
 While a stable internet connection is needed, you may have to install **Docker (Desktop)** and **Docker Compose** if you
