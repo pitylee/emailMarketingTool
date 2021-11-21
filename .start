@@ -1,0 +1,6 @@
+
+cd ./laradock
+
+docker-compose up -d --build nginx mysql redis php-worker
+
+docker-compose exec --user=laradock workspace bash
